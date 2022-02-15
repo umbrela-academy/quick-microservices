@@ -9,12 +9,14 @@
         <module name="api" />
         <module name="eureka-server" />
         <module name="api-client" />
+        <module name="config" />
         <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api" target="11" />
       <module name="api-client" target="11" />
+      <module name="config" target="11" />
       <module name="eureka-server" target="11" />
       <module name="gateway" target="11" />
     </bytecodeTargetLevel>
@@ -23,6 +25,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
       <module name="api-client" options="-parameters" />
+      <module name="config" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
     </option>

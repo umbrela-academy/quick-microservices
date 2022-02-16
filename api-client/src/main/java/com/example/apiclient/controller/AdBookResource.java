@@ -21,6 +21,8 @@ public class AdBookResource {
         this.bookProcessorService = bookProcessorService;
     }
 
+    // Enable if OAuth configured
+    //@PreAuthorize("#oauth2.hasScope('custom_scope_name')")
     @GetMapping("/{id}")
     public ResponseEntity<BookVM> byId(@PathVariable Integer id) {
         Optional<BookVM> bookVM = this.bookProcessorService.getById(id);

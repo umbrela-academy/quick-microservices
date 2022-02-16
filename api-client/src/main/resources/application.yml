@@ -1,0 +1,19 @@
+# Enable if config server enabled
+#spring:
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        serviceId: CONFIGSERVER
+#      failFast: true
+#      username: someusername
+#      password: somepassword
+
+# Enable for security enabled microservices
+#security:
+#  oauth2:
+#    client:
+#      clientId: {client-id}
+#      clientSecret: {client-secret}
+#    resource:
+#      tokenInfoUri: {issuer-uri}/v1/introspect

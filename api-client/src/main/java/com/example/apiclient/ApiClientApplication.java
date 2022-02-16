@@ -5,6 +5,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
+/**
+ * Enable for @PreAuthorize annotation processing.
+ */
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
+//protected static class GlobalSecurityConfiguration extends GlobalMethodSecurityConfiguration {
+//	@Override
+//	protected MethodSecurityExpressionHandler createExpressionHandler() {
+//		return new OAuth2MethodSecurityExpressionHandler();
+//	}
+//}
+
+
 @EnableEurekaClient
 @EnableFeignClients
 @SpringBootApplication

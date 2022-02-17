@@ -29,7 +29,7 @@ public class BookProcessorService {
             BookVM bookVM = new BookVM(book, book.getId() * 10 + " ##");
             return Optional.of(bookVM);
         } catch (FeignException e) {
-            log.debug("Feign exception", e);
+            log.error("Feign exception", e);
         }
         return Optional.empty();
     }

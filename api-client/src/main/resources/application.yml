@@ -10,10 +10,12 @@
 #      password: somepassword
 
 # Enable for security enabled microservices
-#security:
+#example:
+#  baseUrl: http://localhost:8080
 #  oauth2:
 #    client:
+#      grantType: client_credentials
 #      clientId: {client-id}
 #      clientSecret: {client-secret}
-#    resource:
-#      tokenInfoUri: {issuer-uri}/v1/introspect
+#      accessTokenUri: {issuer-uri}/v1/token
+#      scope: custom_scope_book_db

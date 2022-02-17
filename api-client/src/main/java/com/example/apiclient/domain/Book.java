@@ -1,25 +1,44 @@
 package com.example.apiclient.domain;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
 public class Book {
 
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotNull
+    @Size(min = 3)
+    @Column(name = "name", nullable = false)
     private String name;
+
+    @NotNull
+    @Column(name = "price", nullable = false)
     private Double cost;
+
+    @OneToMany(mappedBy = "book")
+    private List<Course> courses = new ArrayList<>();
 
     public Book() {
     }
 
-    public Book(Integer id, String name, Double cost) {
+    public Book(Long id, String name, Double cost) {
         this.id = id;
         this.name = name;
         this.cost = cost;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
